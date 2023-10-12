@@ -1,5 +1,25 @@
 package org.fonseca.ex1;
 
+/*
+  Escreva um programa formado por dois processos
+  concorrentes (threads), leitor e impressor, que executam um
+  loop infinito, e que sincronizam suas ações com o uso de
+  semáforos. O processo leitor fica lendo caracteres do
+  teclado (getchar()) e colocando em um buffer de N
+  posições. Quando o buffer está cheio o ou o caracter de
+  quebra de linha for encontrado (‘\n’) o processo impressor
+  deve imprimir o conteúdo do buffer. Escreva o programa
+  usando semáforos Pthreads e Java.Escreva um programa formado por dois processos
+  concorrentes (threads), leitor e impressor, que executam um
+  loop infinito, e que sincronizam suas ações com o uso de
+  semáforos. O processo leitor fica lendo caracteres do
+  teclado (getchar()) e colocando em um buffer de N
+  posições. Quando o buffer está cheio o ou o caracter de
+  quebra de linha for encontrado (‘\n’) o processo impressor
+  deve imprimir o conteúdo do buffer. Escreva o programa
+  usando semáforos Pthreads e Java.
+*/
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.concurrent.Semaphore;
