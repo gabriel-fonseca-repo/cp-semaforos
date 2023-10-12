@@ -16,6 +16,16 @@ public class Recurso {
     return false;
   }
 
+  public void printarResetar() {
+    char ultimoCaractere = this.getValor().charAt(this.getValor().length() - 1);
+    if (ultimoCaractere == '\n') {
+      System.out.print("String digitada (" + this.getValor().length() + "): " + this.getValor());
+    } else {
+      System.out.println("String digitada (" + this.getValor().length() + "): " + this.getValor());
+    }
+    this.setValor("");
+  }
+
   public void append(String ap) {
     this.valor = valor + ap;
   }

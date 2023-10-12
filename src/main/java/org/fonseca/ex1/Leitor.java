@@ -21,16 +21,13 @@ public class Leitor implements Runnable {
       try {
         char caractere = lerProximoCaractere();
         semaforo.acquire();
-        System.out.printf("\u001B[36mV -> Leitor -> %-10.10s -> tem o semáforo.\n", recurso.getValor());
         recurso.append(caractere);
       } catch (InterruptedException ignored) {
         System.err.println("Erro ao tentar adiquirir acesso ao input no leitor.");
       } finally {
-        System.out.printf("\u001B[36mV -> Leitor -> %-10.10s -> solta o semáforo.\n", recurso.getValor());
         semaforo.release();
       }
     }
-
   }
 
   private char lerProximoCaractere() {
